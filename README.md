@@ -1,5 +1,4 @@
--First is the "too long didn't read" image showcase of the extension.
--Afterwards I use text to describe the extension.
+First I showcase the extension using images then I write about the extension towards the end of the readme.
 
 Step 1: Create a blazor project and right click a folder then click 'New Blazor Component' in the context menu.
 
