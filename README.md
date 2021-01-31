@@ -2,23 +2,23 @@ First I showcase the extension using images then I write about the extension tow
 
 Step 1: Create a blazor project and right click a folder then click 'New Blazor Component' in the context menu.
 
-![1](./markdownImages/1.jpg)
+![1](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/1.jpg)
 
 
 
 Step 2: Type in a component name
 
- ![2](./markdownImages/2.png)
+ ![2](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/2.png)
 
 Step 3: (this step is here to showcase what I entered)
 
-![3](./markdownImages/3.png)
+![3](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/3.png)
 
 
 
 Step 4: Alter the generated namespace to your liking (or write a new one entirely)
 
-![4](./markdownImages/4.png)
+![4](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/4.png)
 
 
 
@@ -26,25 +26,25 @@ Step 5: (this step is here to showcase what I entered)
 
 
 
-![5](./markdownImages/5.png)
+![5](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/5.png)
 
 
 
 Step 6: The WeatherForcast.razor and WeatherForcast.razor.cs files were created in the selected directory.
 
-![6](./markdownImages/6.png)
+![6](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/6.png)
 
 
 
 Step 7: (this step is here to showcase the generated code behind)
 
-![7](./markdownImages/7.png)
+![7](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/7.png)
 
 
 
 Step 8: (this step is here to showcase the generated razor markup)
 
-![8](./markdownImages/8.png)
+![8](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/8.png)
 
 Now I will begin using text to describe the extension.
 
@@ -74,7 +74,7 @@ Opening the 'WeatherForcast.razor' will display the razor markup of the componen
 
 
 
-The repo is on github publicly and is located at 'https://github.com/huntercfreeman/BlazorExtensionVSC'
+The repo is on github publicly and is located at https://github.com/huntercfreeman/BlazorExtensionVSC
 
 
 
