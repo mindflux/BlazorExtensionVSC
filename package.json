@@ -1,7 +1,7 @@
 {
-	"name": "blazoraddons",
-	"displayName": "BlazorAddons",
-	"description": "Adds blazor addons",
+	"name": "blazorNewComponent",
+	"displayName": "Blazor New Component",
+	"description": "Adds context menu to create new component with code behind and namespace.",
 	"version": "0.0.1",
 	"publisher": "Hunter",
 	"repository": {"url": "https://github.com/huntercfreeman/BlazorExtensionVSC"},
