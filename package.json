@@ -4,6 +4,7 @@
 	"description": "Adds blazor addons",
 	"version": "0.0.1",
 	"publisher": "Hunter",
+	"repository": {"url": "https://github.com/huntercfreeman/BlazorExtensionVSC"},
 	"engines": {
 		"vscode": "^1.52.0"
 	},
