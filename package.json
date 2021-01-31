@@ -2,7 +2,7 @@
 	"name": "blazorNewComponent",
 	"displayName": "Blazor New Component",
 	"description": "Adds context menu to create new component with code behind and namespace.",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"publisher": "hunter-blazorExtensions",
 	"repository": {"url": "https://github.com/huntercfreeman/BlazorExtensionVSC"},
 	"engines": {
