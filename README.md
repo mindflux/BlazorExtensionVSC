@@ -63,7 +63,7 @@ After entering the component name you are prompted again but this time for the n
 
 
 
-As shown in the images the files 'WeatherForcast.razor' and 'WeatherForcast.razor.cs'. Spelling seems to not be my strong side I think it's spelt 'Forecast' but I hope we can ignore that.
+As shown in the images the files 'WeatherForcast.razor' and 'WeatherForcast.razor.cs' were created. Spelling seems to not be my strong side I think it's spelt 'Forecast' but I hope we can ignore that.
 
 
 
