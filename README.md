@@ -2,23 +2,23 @@ First I showcase the extension using images then I write about the extension tow
 
 Step 1: Create a blazor project and right click a folder then click 'New Blazor Component' in the context menu.
 
-![1](./markdownImages/1.jpg?raw=true)
+![1](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/1.jpg?raw=true)
 
 
 
 Step 2: Type in a component name
 
- ![2](./markdownImages/2.png?raw=true)
+ ![2](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/2.png?raw=true)
 
 Step 3: (this step is here to showcase what I entered)
 
-![3](./markdownImages/3.png?raw=true)
+![3](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/3.png?raw=true)
 
 
 
 Step 4: Alter the generated namespace to your liking (or write a new one entirely)
 
-![4](./markdownImages/4.png?raw=true)
+![4](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/4.png?raw=true)
 
 
 
@@ -26,25 +26,25 @@ Step 5: (this step is here to showcase what I entered)
 
 
 
-![5](./markdownImages/5.png?raw=true)
+![5](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/5.png?raw=true)
 
 
 
 Step 6: The WeatherForcast.razor and WeatherForcast.razor.cs files were created in the selected directory.
 
-![6](./markdownImages/6.png?raw=true)
+![6](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/6.png?raw=true)
 
 
 
 Step 7: (this step is here to showcase the generated code behind)
 
-![7](./markdownImages/7.png?raw=true)
+![7](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/7.png?raw=true)
 
 
 
 Step 8: (this step is here to showcase the generated razor markup)
 
-![8](./markdownImages/8.png?raw=true)
+![8](https://github.com/huntercfreeman/BlazorExtensionVSC/blob/main/markdownImages/8.png?raw=true)
 
 Now I will begin using text to describe the extension.
 
