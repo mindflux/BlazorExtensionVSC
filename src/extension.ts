@@ -3,7 +3,6 @@ import { getTemplatedComponentCodebehind, getTemplatedComponentRazor } from './t
 const fs = require("fs");
 const path = require("path");
 const currentOS = process.platform;
-var delim = '/';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
@@ -17,17 +16,13 @@ export function activate(context: vscode.ExtensionContext) {
 
 			let componentName: string = componentNameNullable;
 			let filePath: string = fileUri.fsPath;
-			var pathArray;
 
-			if (currentOS !== 'win32') {
-				filePath = filePath.substring(1); //drop first slash for linux
-			}
-			else {
-				filePath = filePath.substring(3); //drop DRIVELETTER:\ off path for windows
-				delim = '\\';
-			}
+			var startChar = currentOS !== 'win32' ? 1 : filePath.indexOf(":") + 2; //strip off first forward slash for linux or drive letter : \ for windows
 
-			pathArray = filePath.split(delim);
+			filePath = filePath.substring(startChar);
+
+			var delim = currentOS !== 'win32' ? '/' : '\\'; //linux v windows
+			var pathArray = filePath.split(delim);
 
 			//loop through array to uppercase each char of first segment 
 			//old method wasn't working properly
