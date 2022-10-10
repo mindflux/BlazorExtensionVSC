@@ -1,7 +1,9 @@
 import * as vscode from 'vscode';
-import { getTemplatedComponentRazor, getTemplatedComponentCodebehind } from './templateFiles';
+import { getTemplatedComponentCodebehind, getTemplatedComponentRazor } from './templateFiles';
 const fs = require("fs");
 const path = require("path");
+const currentOS = process.platform;
+var delim = '/';
 
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
@@ -14,46 +16,47 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 
 			let componentName: string = componentNameNullable;
-
 			let filePath: string = fileUri.fsPath;
+			var pathArray;
 
-			for (let i = 0; i < filePath.length; i++) {
-				if (i == 0) {
-					filePath = filePath.replace("/", "");
-
-					filePath[i + 1] == filePath[i + 1].toUpperCase();
-
-					continue;
-				}
-
-				if (filePath[i] == '/') {
-					filePath = filePath.replace("/", ".");
-
-					filePath[i + 1] == filePath[i + 1].toUpperCase();
-				}
+			if (currentOS !== 'win32') {
+				filePath = filePath.substring(1); //drop first slash for linux
+			}
+			else {
+				filePath = filePath.substring(3); //drop DRIVELETTER:\ off path for windows
+				delim = '\\';
 			}
 
+			pathArray = filePath.split(delim);
+
+			//loop through array to uppercase each char of first segment 
+			//old method wasn't working properly
+			for (let i = 0; i < pathArray.length; i++) {
+				pathArray[i] = pathArray[i].charAt(0).toUpperCase() + pathArray[i].slice(1);
+			}
+
+			filePath = pathArray.join('.');
+
 			let namespaceNullable = await vscode.window.showInputBox({
-				"placeHolder": "Enter namespace",
+				"placeHolder": "Enter namespace or clear field to stop creation of codebehind",
 				"value": filePath
 			});
 
-			if(namespaceNullable === undefined) {
-				vscode.window.showErrorMessage("Namespace was null");
-				return;
-			}
-
-			let namespace: string = namespaceNullable;
-
 			let folderPath = fileUri.fsPath;
 
-			await CreateFile(folderPath, `${componentName}.razor`, getTemplatedComponentRazor(componentName));
-			await CreateFile(folderPath, `${componentName}.razor.cs`, getTemplatedComponentCodebehind(componentName, namespace));
+			await createFile(folderPath, `${componentName}.razor`, getTemplatedComponentRazor(componentName));
+
+			//only create codebehind if namespace is given
+			if (namespaceNullable !== undefined && namespaceNullable.length > 0) {
+				let namespace: string = namespaceNullable;
+				await createFile(folderPath, `${componentName}.razor.cs`, getTemplatedComponentCodebehind(componentName, namespace));
+			}
+
 		})
 	);
 }
 
-async function CreateFile(directoryPath: string, newFileName: string, content: string) {
+async function createFile(directoryPath: string, newFileName: string, content: string) {
 	await fs.writeFile(path.join(directoryPath, newFileName), content, (err: any) => {
 		if (err) {
 			console.error(err);
